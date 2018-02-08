@@ -1,4 +1,9 @@
 def anagrams(s1,s2):
+
+	if len(s1)==0 and len(s2)==0:
+		return True
+	if len(s1)==0 and len(s2) !=0 or len(s1) != 0 and len(s2) ==0:
+			return False
 	bin_hash_1=[0]*256
 	bin_hash_2=[0]*256
 	for i in s1:
@@ -10,5 +15,7 @@ def anagrams(s1,s2):
 			return False
 
 	return True
+
+#print(anagrams("awdadadw","wwaaaddd"))
 		
 
